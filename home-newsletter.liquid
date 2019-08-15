@@ -1,0 +1,55 @@
+{% assign pxs_newsletter_form_success = 'form.success' | t %}
+{% assign pxs_newsletter_form_placeholder = 'form.placeholder' | t %}
+{% assign pxs_newsletter_form_submit = 'form.submit' | t %}
+{% assign pxs_newsletter_form_id = 'pxs-newsletter-' | append: section.id %}
+
+<script type="application/json" data-section-type="pxs-newsletter" data-section-id="{{ section.id }}"></script>
+
+<section class="newsletter-bar">
+  <div class="module-inner">
+    <h3 class="newsletter-bar__heading">{{section.settings.title}}</h3>
+    <div class="newsletter-bar__form newsletter-form">
+      {% include 'newsletter',
+        pxs_newsletter_image: pxs_newsletter_image,
+        pxs_newsletter_form_success: pxs_newsletter_form_success,
+        pxs_newsletter_form_placeholder: pxs_newsletter_form_placeholder,
+        pxs_newsletter_form_submit: pxs_newsletter_form_submit,
+        pxs_newsletter_form_id: pxs_newsletter_form_id
+      %}
+    </div>  
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Newsletter Section",
+    "settings": [
+		{
+			"id":"title",
+			"label":"Section Title",
+			"type":"richtext"
+		}
+	],
+    "presets": [
+      {
+        "name": "Newsletter Section",
+        "category": "Promotional"
+      }
+    ],
+    "locales": {
+      "en": {
+        "form": {
+          "placeholder": "Email address",
+          "submit": "Subscribe",
+          "success": "Thanks for subscribing!"
+        }
+      }
+    }
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
