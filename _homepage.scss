@@ -1,0 +1,81 @@
+// Newsletter Section 
+.newsletter-bar{
+  
+  .newsletter-bar__heading{
+	font-size: 1.15rem;
+    font-weight: 400;
+    max-width: 50%;
+    width: 100%;
+    margin: 0px;
+    color: #195a46;
+  }
+  
+  .newsletter-bar__form{
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    padding: 0px 1.8rem;
+      @media(max-width:48rem){
+      	flex-direction:column;
+      }        
+  }
+  
+  .module-inner{
+	display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0px auto; 
+  }
+  
+  
+  @media(max-width:48rem){
+    .module-inner{
+    	flex-direction:column;
+      	margin:0px 1rem;
+    }
+    
+    .newsletter-bar__form,
+    .newsletter-bar__heading{
+    	max-width:100%;
+    }
+    
+    .newsletter-bar__heading{
+    	text-align:center;
+    }
+  }     
+  
+}
+
+// Newsletter Form
+.newsletter-form{
+  
+  .newsletter-form__form{
+    width:100%; 
+    
+    .contact-form{
+    	display:flex;
+      	align-items:center;
+      	margin:0px;
+      	justify-content:space-between;
+    }
+  }
+  
+  .newsletter-form__input-text{
+  	border:1px solid #38a297;
+	border: 1px solid #38a297;
+    padding: 0.7rem;
+    border-radius: 10px;    
+    width:60%;
+  }
+  
+  .newsletter-form__input-button{
+    width: calc(40% - 10px);
+    margin-left: 10px;
+    background: #0a8c7f;
+    height: auto;
+    padding: 0.3rem 0.7rem 0.5rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+  
+}
